@@ -3,5 +3,49 @@
     xmlns="http://xmlns.jcp.org/xml/ns/javaee"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-facesconfig_2_2.xsd">
-
+    <navigation-rule>
+        <from-view-id>/index.xhtml</from-view-id>
+        <navigation-case>
+            <from-outcome>case1</from-outcome>
+            <to-view-id>/catalogue.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>case2</from-outcome>
+            <to-view-id>/panier.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>case3</from-outcome>
+            <to-view-id>/creationCompte.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>toauthentification</from-outcome>
+            <to-view-id>/authentification.xhtml</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+    <navigation-rule>
+        <from-view-id>/authentification.xhtml</from-view-id>
+        <navigation-case>
+            <from-outcome>case1</from-outcome>
+            <to-view-id>/gestionCatalogue.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>case2</from-outcome>
+            <to-view-id>/monCompte.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>case3</from-outcome>
+            <to-view-id>/commande.xhtml</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+    <navigation-rule>
+        <from-view-id>/gestionCatalogue.xhtml</from-view-id>
+        <navigation-case>
+            <from-outcome>case1</from-outcome>
+            <to-view-id>/gestionStock.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>case2</from-outcome>
+            <to-view-id>/gestionCommande.xhtml</to-view-id>
+        </navigation-case>
+    </navigation-rule>
 </faces-config>
