@@ -5,12 +5,25 @@ To change this template file, choose Tools | Templates
 and open the template in the editor.
 -->
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core">
     <head>
-        <title>TODO supply a title</title>
+        <title>Authentification</title>
         <meta name="viewport" content="width=device-width"/>
+               
     </head>
     <body>
-        <div>TODO write content</div>
+        <div>Page de connection</div>
+        <f:view>
+        <h:form>
+            <h:outputLabel id="fieldLabelLoginClient" for="fieldLoginClient" value="Login: " />
+            <h:inputText id="fieldLoginClient" value="#{bean.LoginClient}" />
+            <h:outputLabel id="fieldLabelMdp" for="fieldMdp" value="Mot de passe: " />
+            <h:inputText id="fieldMdp" value="#{bean.Mdp}" />        
+            <h:commandButton value="Valider" action="#{bean.login()}"/>
+    </h:form>
+        </f:view>
     </body>
 </html>
+

@@ -5,12 +5,28 @@ To change this template file, choose Tools | Templates
 and open the template in the editor.
 -->
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core">
     <head>
-        <title>TODO supply a title</title>
+        <title>Gestion du catalogue</title>
         <meta name="viewport" content="width=device-width"/>
+               
     </head>
     <body>
-        <div>TODO write content</div>
+        <div>Gestion du catalogue</div>
+        <f:view>
+        <h:form>
+            <h:outputLabel id="fieldLabelTitre" for="fieldTitre" value="Titre: #{bean.Titre}" />
+            <h:outputLabel id="fieldLabelCategorie" for="fieldCategorie" value="Categorie: #{bean.Categorie}" />
+            <h:outputLabel id="fieldLabelDescription" for="fieldDescription" value="Description: #{bean.Description}" />     
+            <h:outputLabel id="fieldLabelDate" for="fieldDate" value="Date: #{bean.Date}" />
+            <h:outputLabel id="fieldLabelQuantité" for="fieldQuantité" value="Quantité: #{bean.Quantité}" />
+            <h:outputLabel id="fieldLabelAuteur" for="fieldAuteur" value="Auteur: #{bean.Auteur}" />
+            <h:outputLabel id="fieldLabelEditeur" for="fieldEditeur" value="Editeur: #{bean.Editeur}" />
+            <h:outputLabel id="fieldLabelEtat" for="fieldEtat" value="Etat: #{bean.EtatLivre}"/>
+            <h:commandButton value="Valider" action="#{bean.update()}"/>
+    </h:form>
+        </f:view>
     </body>
 </html>

@@ -5,12 +5,34 @@ To change this template file, choose Tools | Templates
 and open the template in the editor.
 -->
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core">
     <head>
-        <title>TODO supply a title</title>
+        <title>Création de compte</title>
         <meta name="viewport" content="width=device-width"/>
+               
     </head>
     <body>
-        <div>TODO write content</div>
+        <div>Création de compte</div>
+        <f:view>
+        <h:form>
+            <h:outputLabel id="fieldLabelLoginClient" for="fieldLoginClient" value="Login: " />
+            <h:inputText id="fieldLoginClient" value="#{bean.LoginClient}" />
+            <h:outputLabel id="fieldLabelMdp" for="fieldMdp" value="Mot de passe: " />
+            <h:inputText id="fieldCategorie" value="#{bean.Mdp}" />
+            <h:outputLabel id="fieldNom" for="fieldNom" value="Nom: " />
+            <h:inputText id="fieldNom" value="#{bean.Nom}" />        
+             <h:outputLabel id="fieldLabelPrenom" for="fieldPrenom" value="Prenom: " />
+            <h:inputText id="fieldPrenom" value="#{bean.Prenom}"/>
+             <h:outputLabel id="fieldLabelEmail" for="fieldEmail" value="Email: " />
+            <h:inputText id="fieldEmail" value="#{bean.Email}"/>
+            <h:outputLabel id="fieldLabelCB" for="fieldCB" value="Numéro de carte bancaire: " />
+            <h:inputText id="fieldCB" value="#{bean.CB}"/>
+            <h:outputLabel id="fieldLabelAdresse" for="fieldAdresse" value="Adresse: " />
+            <h:inputText id="fieldAdresse" value="#{bean.Adresse}"/>
+            <h:commandButton value="Valider" action="#{bean.createUser()}"/>
+    </h:form>
+        </f:view>
     </body>
 </html>

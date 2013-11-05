@@ -5,12 +5,26 @@ To change this template file, choose Tools | Templates
 and open the template in the editor.
 -->
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core">
     <head>
-        <title>TODO supply a title</title>
+        <title>Gestion des commandes</title>
         <meta name="viewport" content="width=device-width"/>
+               
     </head>
     <body>
-        <div>TODO write content</div>
+      <div>Gestion des commandes</div>
+       <f:view>
+        <h:form>
+            <h:outputLabel id="fieldLabelLoginClient" for="fieldLoginClient" value="Client: #{bean.LoginClient}" />
+            <h:outputLabel id="fieldLabelIDCommande" for="fieldIDCommande" value="Numéro Commande: #{bean.IDCommande}" />
+            <h:outputLabel id="fieldLabelCategorie" for="fieldCategorie" value="Categorie: #{bean.Categorie}" />  
+            <h:outputLabel id="fieldLabelTitre" for="fieldTitre" value="Titre: #{bean.Titre}" />
+             <h:outputLabel id="fieldLabelDate" for="fieldDateCommande" value="Date: #{bean.DateCommande}" />       
+             <h:outputLabel id="fieldLabelQuantité" for="fieldQuantiteCommande" value="Quantité: #{bean.QuantitéCommande}" />           
+            <h:commandButton value="Valider" action="#{bean.commander()}"/>
+        </h:form>
+       </f:view>
     </body>
 </html>
